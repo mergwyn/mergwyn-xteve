@@ -1,0 +1,21 @@
+############################################
+# WARNING:
+# Managed by puppet - DO NOT modify locally.
+############################################
+
+[Unit]
+Description=xteve Daemon
+After=network.target
+
+[Service]
+User=<%= scope['::xteve::user'] %>
+Group=<%= scope['::xteve::group'] %>
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=<%= scope['::xteve::install_dir'] %>/xteve/xteve_linux
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target
+
