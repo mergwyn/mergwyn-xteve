@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/mergwyn/mergwyn-xteve.svg?branch=master)](https://travis-ci.com/mergwyn/mergwyn-xteve)
 
 # xteve
 
