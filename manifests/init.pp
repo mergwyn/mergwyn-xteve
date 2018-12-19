@@ -5,13 +5,13 @@
 # @example
 #   include xteve
 class xteve (
-  Boolean                 $package_manage = true,
-  Boolean                 $service_manage = true,
-  Boolean                 $service_active = true,
-  Boolean                 $service_enable = true,
-  String                  $user           = 'xteve',
-  String                  $group          = 'xteve',
-  String                  $install_path   = '/opt',
+  Boolean $package_manage = true,
+  Boolean $service_manage = true,
+  Boolean $service_active = true,
+  Boolean $service_enable = true,
+  String  $user           = 'xteve',
+  String  $group          = 'xteve',
+  String  $install_path   = '/opt',
   ) {
 
   contain xteve::config

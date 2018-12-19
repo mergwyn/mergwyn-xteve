@@ -17,7 +17,7 @@ class xteve::install {
     }
 
     wget::fetch { 'xteve binary':
-      source      => "${download_url}",
+      source      => $download_url,
       destination => "${extract_dir}/",
       cache_dir   => '/var/cache/wget',
       timeout     => 15,
