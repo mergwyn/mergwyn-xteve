@@ -35,11 +35,11 @@ branches:
     - master
     - /^v\d/
 notifications:
-   email:
-     recipients:
-       - gary@theclarkhome.com
-     on_success: never # default: change
-     on_failure: always # default: always
+  email:
+    recipients:
+    - gary@theclarkhome.com
+    on_success: never
+    on_failure: always
 deploy:
   provider: puppetforge
   user: puppet
