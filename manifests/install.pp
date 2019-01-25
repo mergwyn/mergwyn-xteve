@@ -7,10 +7,11 @@
 class xteve::install {
   $install_path = $::xteve::install_path
   $extract_dir  = "${install_path}/xteve"
-  $download_url = 'https://xteve.de/download/xteve_linux'
+  $download_url = 'https://xteve.de/download/xteve_linux.zip'
+  $cache_dir    = '/var/cache/wget'
 
   if $xteve::package_manage {
-    file { $extract_dir:
+    file { [ $extract_dir, $cache_dir ] :
       ensure => directory,
       owner  => $::xteve::user,
       group  => $::xteve::group,
@@ -19,7 +20,7 @@ class xteve::install {
     wget::fetch { 'xteve binary':
       source      => $download_url,
       destination => "${extract_dir}/",
-      cache_dir   => '/var/cache/wget',
+      cache_dir   => $cache_dir,
       timeout     => 15,
       verbose     => true,
       execuser    => $::xteve::user,
