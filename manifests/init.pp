@@ -23,4 +23,3 @@ class xteve (
   ~> Class['::xteve::service']
 
 }
-# vim: nu tabstop=8 expandtab shiftwidth=2 softtabstop=2
